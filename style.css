@@ -1,0 +1,301 @@
+.bg, .bg-wd, .bg-hp, .bg-prog {
+  min-height: 100vh;
+}
+#game {
+  display: none;
+}
+
+.bg {
+  color: gray;
+}
+#select-theme  {
+  font-family: 'Raleway', sans-serif;
+}
+.bg-wd {
+  background-image: url("images/wd.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Nosifer', cursive;
+  color: #b30000;
+}
+.bg-hp {
+  background-image: url("images/hp2.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Rye', cursive;
+  color:    #13c1ec;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.bg-prog {
+  background: black;
+  color: #00cc00;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.button-prog {
+  font-size: 23px;
+  border-radius: 5px;
+  background-color: #9933ff;
+  color: lawngreen;
+  border: none;
+  padding-top: 3px;
+  font-weight: 80;
+}
+.button-wd {
+  background-color: #333333;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid red;
+  font-family: sans-serif;
+  font-size: 25px;
+  color: #e4c49b;
+}
+.button-hp {
+  background-color: #333333;
+  border: 1px solid #87b8c5;
+  color:  #87b8c5;
+  border-radius: 5px;
+  font-size: 25px;
+}
+.h4-message {
+  height: 50px;
+  font-size: 50px;
+}
+
+.instructions-wd {
+  background-color: #333333;
+  color: #cc3300;
+  font-family: sans-serif;
+  opacity: 0.9;
+}
+.instructions-hp {
+  background-color: #333333;
+  opacity: 0.7;
+  color:#89e0f5;
+  font-family: sans-serif;
+}
+.instructions-prog {
+  background-color: #006400;
+}
+
+.score-div {
+  position: fixed;
+  left: 3em;
+  top: 1em;
+}
+
+.difficulty-div {
+  position: fixed;
+  left: 3em;
+  top: 5em;
+}
+.time-div {
+  position: fixed;
+  left: 3em;
+  top: 3em;
+}
+.level-div {
+  position: fixed;
+  left: 3em;
+  top: 7em;
+}
+.back-div {
+  position: fixed;
+  right: 3em;
+  top: 1em;
+}
+.back-wd, .back-hp, .back-prog {
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+.back-wd {
+  color: #e4c49b;
+  border: 1px solid red;
+  background-color: #333333;
+}
+.back-hp {
+  background-color: #333333;
+  border: 1px solid #87b8c5;
+  color:  #87b8c5;
+}
+.back-prog {
+  background-color: #9933ff;
+  color: lawngreen;
+  border: none;
+}
+.back-hp:hover, .back-wd:hover, .back-prog:hover {
+  transform: scale(1.15);
+}
+
+#difficulty-buttons {
+  position: absolute;
+  width: 300px;
+  margin-left: -150px;
+  left: 50%;
+  bottom: 15.5em;
+  display: flex;
+  justify-content: space-around;
+}
+#instructions {
+  position: absolute;
+  margin-left: -250px;
+  width: 500px;
+  left: 50%;
+  bottom: 3em;
+  text-align: center;
+}
+.img-hp, .img-wd, .img-prog {
+  width: 100%;
+}
+
+.display-2{
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  height: 1em;
+  font-family: sans-serif;
+  color: #e4c49b;
+  margin-top: 20px;
+}
+.display-prog {
+  color: #00cc00;
+  font-size: 5em;
+}
+.input-wd, .input-hp, .input-prog {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 7em;
+  margin-top: 30px;
+}
+.input-wd {
+  color: red;
+}
+.input-hp {
+  color: #13c1ec;
+}
+.input-prog {
+  color: #00cc00;
+}
+.magic-words {
+  display: block;
+  height: 30px;
+  font-size: 35px;
+}
+.head-land {
+  font-size: 3.5em;
+}
+.red{
+  color: red;
+}
+#current-word, #press-enter {
+  height: 67px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#word-input {
+  height: 1em;
+} 
+
+/* xs 
+ @media (max-width: 575px) {
+  
+} */
+
+/* sm 
+ @media (min-width: 576px) and (max-width: 767px){
+
+} */
+
+/* md  */
+@media only screen and (min-width: 768px) {
+  .img-hp:hover, .img-wd:hover, .img-prog:hover {
+    transform: scale(1.15);
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+  }
+  .button-wd:hover, .button-hp:hover, .button-prog:hover{
+    transform: scale(1.15);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .typing-game {
+    font-family: sans-serif;
+  }
+  .back-wd, .back-hp, .back-prog {
+    font-size: 20px;
+  }
+  .h4-message {
+    font-size: 40px;
+  }
+}
+
+/* lg 
+ @media (min-width: 992px) and (max-width: 1199px){
+
+} */
+
+/* xl  
+@media (min-width: 1200px){
+  
+} */
+
+
+@media only screen and (max-width: 1199px){
+  h3 {
+    font-size: 12pt;
+  }
+  .score-div, .difficulty-div, .time-div, .level-div {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    left: auto;
+    top: auto;
+    font-family: sans-serif;
+  }
+  #difficulty-buttons {
+    bottom: 17em;
+  }
+  #instructions {
+    width: 300px;
+    margin-left: -150px;
+  }
+  .lead {
+    font-family: 'Archivo Black', sans-serif;
+  }
+  .display-2 {
+    margin-top: 5px;
+  }
+  .input-wd, .input-hp, .input-prog {
+    font-size: 5em;
+    margin-top: 5px;
+  }
+  .back-div {
+    right: 0.5em;
+  }
+}
+
+
+@media only screen and (max-height: 700px) {
+  #difficulty-buttons {
+    position: relative;
+    bottom: auto;
+    margin-top: 5%;
+  }
+  #instructions{
+    position: relative;
+    bottom: auto;
+    margin-top: 5%;
+  }
+}
+
+
+
+

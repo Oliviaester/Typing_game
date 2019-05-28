@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Typing Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nosifer|Waiting+for+the+Sunrise" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg" id="body" onkeydown= "onKeyDown(event)">
+  <div id="game">
+      <header class="text-center p-3">
+          <h1 class="typing-game">Typing Game</h1>
+        </header>
+
+  <div class="container text-center">
+
+    <!-- Word & Input -->
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <p class="lead">Type The Given Word Within
+          <span id="seconds">5</span> Seconds:</p>
+          <div class="row">
+            <div class="score-div">
+              <h3>Score:
+                <span id="score">0</span>
+              </h3>
+            </div>
+            <div class="time-div">
+                <h3>Time left:
+                  <span id="time">0.00</span>
+                </h3>
+            </div>
+            <div class="difficulty-div">
+                <h3>
+                  <span id="difficulty-text">easy</span>
+                </h3>
+            </div>
+            <div class ="level-div">
+              <h3>Level: <span id ="level">1</h3></span>
+            </div>
+            <div class="back-div" id="back-div">
+              <button id="back-button" onClick="goBack()">Back</button>
+            </div>
+          </div>
+        <h2 class="display-2" id="current-word"></h2>
+        <h2 class="press-enter" id="press-enter"></h2>
+        <h2 class ="word-input" id="word-input"></h2>
+        <h4 class="h4-message mt-3" id="message"></h4>
+      </div>
+    </div>
+  </div>
+  <!-- Difficulty buttons -->
+  <div id="difficulty-buttons">
+    <button class = "button-regular" id = "button-easy" onclick="setDifficulty('easy')">easy</button>
+    <button class = "button-regular" id = "button-medium" onclick="setDifficulty('medium')">medium</button>
+    <button class = "button-regular" id = "button-hard" onclick="setDifficulty('hard')">hard</button>
+  </div>
+  <!-- Instructions -->
+  <div class="card card-body bg" id="instructions">
+      <h5>Instructions</h5>
+      <p>Choose a difficulty level.<br>
+         To start press Enter.<br>
+      Type each word in the given amount of seconds to score.</p>
+    </div>
+  </div>
+  <div id="select-theme">
+    <header class="text-center p-3 mt-5">
+      <h1 class="head-land">Typing Game</h1>
+    </header>
+    <div class="container text-center">
+      <div class="row mt-5">
+        <div class="col-md-6 mx-auto">
+            <div class="magic-words" id="magic"></div>
+          <!-- <p>Select Theme:</p> -->
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div  class="col-md-4">
+          <img id="wd-theme" class="img-wd img-thumbnail" src="images/wd2.jpg" alt="">
+        </div>
+        <div  class="col-md-4">
+          <img id="hp-theme" class="img-hp img-thumbnail" src="images/hp6.jpg" alt="">
+        </div>
+        <div  class="col-md-4">
+          <img id="prog-theme" class="img-prog img-thumbnail" src="images/prog.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
